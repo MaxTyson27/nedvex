@@ -1,22 +1,252 @@
 
 body{
-  @extend %grap-300;
+  @extend %grap-400;
   font-size: 16px;
   color: #fff;
+}
+*{
+  outline: transparent;
 }
 
 .wrapper {
   width: 100%;
   min-height: 100%;  
-  overflow: hidden;
+  // overflow: hidden;
+  background: linear-gradient(159.08deg, #1C2A4D -3.33%, #000A23 108.36%);
 }
 
+// .main{
+//   background: linear-gradient(159.08deg, #1C2A4D -3.33%, #010B24 67%);
+// }
+
 .container{
-  max-width: 1130px;
+  max-width: 1190px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
 a{
   color: inherit;
+}
+
+.title{
+  background: linear-gradient(138.33deg, #C4A882 14.03%, #7685AA 107.65%),
+linear-gradient(0deg, #091431, #091431);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @extend %grap-600;
+    letter-spacing: 0.01em;
+    font-size: 40px;
+    line-height: 130%;
+}
+
+.title-d{
+    background: linear-gradient(138.33deg, #FDDDB1 14.03%, #45547A 107.65%),
+linear-gradient(0deg, #F5E6D1, #F5E6D1),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @extend %grap-600;
+    letter-spacing: 0.01em;
+    font-size: 40px;
+    line-height: 130%;
+}
+
+.title-slider{
+  letter-spacing: 0.01em;
+  font-size: 40px;
+  line-height: 130%;
+  background: linear-gradient(108.29deg, #F4D5AA 12.13%, rgba(69, 84, 122, 0) 114.94%),
+linear-gradient(0deg, #F5E6D1, #F5E6D1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @extend %grap-400;
+}
+
+.slick-arrow{
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.slick-next{
+  left: 120px;
+}
+
+.slick-prev{
+  left: 0;
+}
+
+.chart-num{
+  background: linear-gradient(108.29deg, #F4D5AA 12.13%, rgba(69, 84, 122, 0) 114.94%),
+linear-gradient(0deg, #F5E6D1, #F5E6D1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.01em;
+  font-size: 40px;
+  line-height: 130%;
+  span{
+    font-size: 25px;
+  }
+}
+
+.chart-text{
+  opacity: 0.5;
+  color: #FFFFFF;
+  letter-spacing: 0.01em;
+  font-size: 15px;
+  line-height: 150%;
+}
+
+.chart-logo{
+  position: absolute;
+  opacity: 0.3;
+  margin-left: auto;
+  bottom: 10px;
+  right: 0;
+}
+
+
+
+
+.page__input {
+    border: none;
+    color: #838892;
+    font-size: 18px;
+    border-bottom: 1px solid #cdcdcc;
+    background-color: transparent;
+    height: 60px;
+    padding: 0 10px;
+    width: 100%;
+    display: block;
+}
+
+
+
+
+.page__input{
+  text-align: center;
+  color: #0B1633;
+  &:focus{
+    &::placeholder{
+      font-size: 0px;
+    }
+  }
+}
+.page__input::placeholder {
+    color: #838892;
+    font-size: 18px;
+    line-height: 130%;
+    padding-bottom: 7px;
+    text-align: center;
+    letter-spacing: 0.01em;
+}
+.page__item{
+  position: relative;
+  margin-bottom: 25px;
+  &:first-child{
+    margin-bottom: 55px;
+  }
+}
+
+.page__error {
+    position: absolute;
+    display: block;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #DD2A2A;
+    margin-top: -20px;
+}
+
+.page__error_hidden {
+    display: none;
+}
+
+.error-red {
+    border: 1px solid #dd2a2a;
+}
+
+.form{
+  &__copy{
+    margin-bottom: 75px;
+    text-align: center;
+    color: #010A23;
+    letter-spacing: 0.01em;
+    font-size: 13px;
+    line-height: 150%;
+    opacity: 0.3;
+  }
+  &__btn{
+    color: #0B1633;
+    letter-spacing: 0.03em;
+    font-size: 13px;
+    line-height: 150%;
+    text-transform: uppercase;
+    @include flex-c;
+    width: 100%;
+    height: 60px;
+    display: block;
+    border: 1px solid #0B1633;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover{
+      background: #0B1633;
+      color: #fff;
+    }
+  }
+}
+
+.header__fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #FEFEFB;
+  box-shadow: 0px 7px 8px rgba(188, 188, 188, 0.17);
+  animation-name: show__header;
+  animation-duration: .5s;
+  z-index: 55;
+  &.header__top{
+    padding: 0 40px;
+    height: 100px;
+    margin-bottom: 0;
+    .burger{
+      span{
+        background-color: #000;
+      }
+    }
+    .logo{
+      svg{
+        width: 98px;
+        height: 38px;
+        path{
+          fill:#0B1633;
+        }
+      }
+    }
+    .header__phone{
+      color: #0B1633;
+    }
+    .menu__list-link{
+      color: #0B1633;
+
+    }
+  }
+}
+
+@keyframes show__header{
+  0%{
+    opacity: 0;
+    top: -200px;
+  }
+  100%{
+    opacity: 1;
+    top: 0;
+  }
 }

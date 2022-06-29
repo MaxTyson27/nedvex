@@ -18,5 +18,13 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.5.1"
+  },
+  "dependencies": {
+    "inputmask": "^5.0.6",
+    "jquery-match-height": "^0.7.2",
+    "jquery.maskedinput": "^1.4.1",
+    "lightbox2": "^2.11.3",
+    "magnific-popup": "^1.1.0",
+    "slick-carousel": "^1.8.1"
   }
 }
